@@ -1,0 +1,59 @@
+src/matrix.h:248:32: style:inconclusive: Function 'add' argument 2 names different: declaration 'b' definition 'B'. [funcArgNamesDifferent]
+Matrix* add(Matrix* A, Matrix* B){
+                               ^
+src/matrix.h:72:39: note: Function 'add' argument 2 names different: declaration 'b' definition 'B'.
+static Matrix* add(Matrix* A, Matrix* b);
+                                      ^
+src/matrix.h:248:32: note: Function 'add' argument 2 names different: declaration 'b' definition 'B'.
+Matrix* add(Matrix* A, Matrix* B){
+                               ^
+src/function.h:94:23: style:inconclusive: Function 'tanHDeriv' argument 1 names different: declaration 'sigmoidInput' definition 'tanhInput'. [funcArgNamesDifferent]
+float tanHDeriv(float tanhInput){
+                      ^
+src/function.h:27:30: note: Function 'tanHDeriv' argument 1 names different: declaration 'sigmoidInput' definition 'tanhInput'.
+static float tanHDeriv(float sigmoidInput);
+                             ^
+src/function.h:94:23: note: Function 'tanHDeriv' argument 1 names different: declaration 'sigmoidInput' definition 'tanhInput'.
+float tanHDeriv(float tanhInput){
+                      ^
+src/matrix.h:304:5: style:inconclusive: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+    int i, j;
+    ^
+src/matrix.h:325:5: style:inconclusive: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+    assert(A->cols == B->rows);
+    ^
+tests/matrix_tests.c:5:12: warning: Size of pointer 'A_data' used instead of size of its data. [pointerSize]
+    float* A_data = (float*)malloc(sizeof(float*) * 3 * 3);
+           ^
+src/network.h:293:9: warning: sscanf() without field width limits can crash with huge input data. [invalidscanf]
+        sscanf(buf, "%s", funcString);
+        ^
+src/network.h:108:13: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+    Matrix* tmp,* tmp2;
+            ^
+src/network.h:131:15: style: The scope of the variable 'k' can be reduced. [variableScope]
+    int i, j, k;
+              ^
+src/network.h:158:15: style: The scope of the variable 'k' can be reduced. [variableScope]
+    int i, j, k;
+              ^
+src/network.h:186:15: style: The scope of the variable 'max' can be reduced. [variableScope]
+    int i, j, max;
+              ^
+src/network.h:70:47: style: Unsigned expression 'numHiddenLayers' can't be negative so it is unnecessary to test it. [unsignedPositive]
+    assert(numFeatures > 0 && numHiddenLayers >= 0 && numOutputs > 0);
+                                              ^
+src/optimizer.h:142:25: style:inconclusive: Found duplicate branches for 'if' and 'else'. [duplicateBranch]
+                        if (lossFunction == CROSS_ENTROPY_LOSS){
+                        ^
+src/optimizer.h:147:25: note: Found duplicate branches for 'if' and 'else'.
+                        else{
+                        ^
+src/optimizer.h:142:25: note: Found duplicate branches for 'if' and 'else'.
+                        if (lossFunction == CROSS_ENTROPY_LOSS){
+                        ^
+src/optimizer.h:63:15: style: The scope of the variable 'k' can be reduced. [variableScope]
+    int i, j, k;
+              ^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
